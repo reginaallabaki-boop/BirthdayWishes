@@ -11,13 +11,13 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         body {
-            margin: 0;
-            overflow: hidden;
-            font-family: 'Inter', sans-serif;
-            height: 100vh;
-            touch-action: manipulation;
-             background: linear-gradient(135deg, #f9a8d4, #f3e8ff);
-        }
+              margin: 0;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    touch-action: manipulation;
+    background: linear-gradient(135deg, #f9a8d4, #f3e8ff);
+    overflow-x: hidden;
+}
 
         #app {
             position: relative;
@@ -37,6 +37,7 @@
             align-items: center;
             padding: 20px;
             box-sizing: border-box;
+            overflow-y: auto;
         }
 
         .step {
@@ -53,6 +54,8 @@
             transform: translateY(20px);
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
             pointer-events: none;
+            max-height: 85vh;
+            overflow-y: auto;
         }
 
         .step.active {
@@ -477,5 +480,6 @@
         updateProgressBar();
     </script>
 </body>
+
 
 </html>
